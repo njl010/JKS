@@ -1,0 +1,23 @@
+pipeline{
+    agent any
+    
+    stages{
+        stage('copy git repo url'){
+            steps{
+                git url: 'https://github.com/njl010/JKS7_Wordpress_sql.git', branch: "main"
+            }
+        }
+    stage('ufw port add'){
+        steps{
+            sh 'echo "asd123." | sudo -S ufw allow 8081/tcp'
+            }
+         }
+         
+    stage('create container'){
+        steps{
+            sh 'echo "asd123." | sudo -S docker-compose -f wordpress.yaml up -d'
+    }
+    
+    }
+}
+}

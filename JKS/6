@@ -1,0 +1,30 @@
+pipeline{
+    agent any
+    
+    stages{
+        stage('copy git url'){
+            steps{
+                git url: 'https://github.com/njl010/JKS6_dockerfile-compose.git' , branch: "main"
+            }
+        }
+        
+        stage('ufw port add'){
+            steps{
+                sh 'echo "asd123." | sudo -S ufw allow 9896/tcp'
+            }
+        }
+        stage('build the docker image'){
+            steps{
+                sh 'echo "asd123." | sudo -S docker build -f image -t nginx .'
+            }
+        }
+        
+        stage('create container'){
+            steps{
+                sh 'echo "asd123." | sudo -S docker run -d --name ash -p 9896:80 nginx'
+            }
+            
+        }
+    }
+    
+}

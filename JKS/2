@@ -1,0 +1,17 @@
+pwd
+echo "asd123." | sudo -S mkdir -p /var/www/html
+echo "asd123." | sudo -S cp about.html /var/www/html  
+echo "asd123." | sudo -S cp blog.html /var/www/html
+echo "asd123." | sudo -S cp booking.html /var/www/html
+echo "asd123." | sudo -S cp contact.html /var/www/html
+echo "asd123." | sudo -S cp index.html /var/www/html
+echo "asd123." | sudo -S cp price.html /var/www/html
+echo "asd123." | sudo -S cp service.html /var/www/html  
+echo "asd123." | sudo -S cp single.html /var/www/html  
+echo "asd123." | sudo -S cp -r css /var/www/html  
+echo "asd123." | sudo -S cp -r img /var/www/html
+echo "asd123." | sudo -S cp -r js /var/www/html
+echo "asd123." | sudo -S cp -r lib /var/www/html
+echo "asd123." | sudo -S cp -r mail /var/www/html
+echo "asd123." | sudo -S cp -r scss /var/www/html
+echo "asd123." | sudo -S cp -r pet-care-website-template.jpg /var/www/html
